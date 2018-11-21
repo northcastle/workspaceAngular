@@ -1,0 +1,17 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+</div>
+<!-- 1通过连接的方式进行的路由[routerLink] = "['/page01']" -->
+
+<!-- 1.1通过查询参数的方式进行数据传递 -->
+<a [routerLink] = "['/page01']" [queryParams] = "{id:666}">跳转到page01</a>&nbsp;&nbsp;
+<!-- 1.2通过url参数进行参数传递 -->
+<a [routerLink] = "['/page02',888]">跳转到page02</a>&nbsp;&nbsp;
+
+<!-- 2通过控制器中的方法进行路由 -->
+<button type="button" (click) = "jumpToPage02()">跳转到page02</button>
+<!-- 这个就是那个插座 -->
+<router-outlet></router-outlet>
